@@ -1,0 +1,55 @@
+.TodoListItem{
+
+    padding: 0.7rem;
+    display:flex; // 빈체크박스-텍스트-제거아이콘 인라인으로
+    align-items: center;
+    
+    &:nth-child(even){
+         background: rgba(240, 236, 236, 0.938);
+    }
+
+    //Checkbox는 text와 &.checked까지
+    .checkbox{
+        display:flex;
+        flex:1;
+        align-items: center;
+        padding-right:0.5rem;
+
+        svg{ //체크박스 아이콘 크기
+            font-size: 1.3rem;
+        }
+        
+    
+    .text{
+        display:flex;
+        flex:1;
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    //체크되었을때 보여줄 스타일
+    &.checked{
+        .svg{
+            color: rgb(219, 219, 219);
+        }
+
+        .text{
+            color:rgb(219, 219, 219);
+            text-decoration: line-through;
+        }
+        }
+    }
+
+    .remove{
+        display:flex;
+        align-items:center;
+       
+        svg{ // 아이콘 크기
+            font-size: 1.3rem;
+        }
+        
+
+    }
+
+
+}
